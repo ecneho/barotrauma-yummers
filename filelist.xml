@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="Yummers" corepackage="False" modversion="1.0.0" gameversion="1.12.7.0">
+  <RandomEvents file="%ModDir%/Events.xml" />
   <Afflictions file="%ModDir%/Hunger.xml"/>
   <Talents file="%ModDir%/Talents.xml" />
   <Text file="%ModDir%/English.xml"/>
-  <RandomEvents file="%ModDir%/Events.xml" />
+  <Item file="%ModDir%/Cans/canned_chili/yum-canned_chili.xml" />
+  <Item file="%ModDir%/Cans/canned_chili/yum-canned_chili_open.xml" />
+  <Item file="%ModDir%/Cans/canned_chili/yum-canned_chili_empty.xml" />
 </contentpackage>

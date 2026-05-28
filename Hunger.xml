@@ -61,7 +61,7 @@
         MaxStrength="100">
       </Description>
 
-      <!-- TODO: add OtherCharacter Descriptions -->
+      <!-- TODO: add OtherCharacter Descriptions, rework into 3 stages (good, neutral, bad) instead -->
 
       <!-- Stage 1: No penalties -->
       <Effect

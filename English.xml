@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
   <Override>
-    <!-- TODO: change text -->
+    <!-- TODO: change text, add can translation -->
     <affliction.description.yum-hunger.self.very-low>HUNGER 0-20</affliction.description.yum-hunger.self.very-low>
     <affliction.description.yum-hunger.self.low>HUNGER 20-40</affliction.description.yum-hunger.self.low>
     <affliction.description.yum-hunger.self.medium>HUNGER 40-60</affliction.description.yum-hunger.self.medium>

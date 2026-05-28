@@ -17,7 +17,7 @@
       </ScriptedEvent>
     </EventSet>
 
-    <!-- add hunger talent -->
+    <!-- adds hunger talent -->
     <EventPrefabs>
       <ScriptedEvent Identifier="yum.event.setup">
         <WaitAction Time="5"/>

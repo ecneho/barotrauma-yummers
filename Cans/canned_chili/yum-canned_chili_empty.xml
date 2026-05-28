@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items>
+    <Item
+      Identifier="yum-canned_chili_empty"
+      Name="Empty Can of Chili"
+      Description="An empty can of chili. Nothing left."
+      Category="Misc"
+      Subcategory="Canned"
+      Tags="smallitem"
+      Scale="0.5"
+      MaxStackSize="12"
+      MaxStackSizeCharacterInventory="4"
+      CargoContainerIdentifier="metalcrate"
+      UseInHealthInterface="false"
+      ImpactSoundTag="impact_metal_light"
+      ImpactTolerance="5">
+
+      <Sprite
+        Texture="%ModDir%/cans.png"
+        SourceRect="0,0,28,53"
+        Depth="0.6"
+        Origin="0.5,0.5" />
+
+      <InventoryIcon
+        Texture="%ModDir%/cans.png"
+        SourceRect="0,0,28,53"
+        Origin="0.5,0.5" />
+
+      <Body
+        Width="29"
+        Height="54"
+        Density="11.5" />
+
+      <Deconstruct Time="5" RequiredDeconstructor="deconstructor">
+        <Item Identifier="aluminium" Amount="1" />
+      </Deconstruct>
+
+      <Throwable
+        DisableWhenRangedWeaponEquipped="true"
+        CanBePicked="true"
+        CharacterUsable="true"
+        CanBeCombined="true"
+        RemoveOnCombined="false"
+        Slots="Any,RightHand,LeftHand"
+        ThrowForce="2.0"
+        AimPos="35,-10"
+        SwingWhenUsing="true"
+        Msg="ItemMsgPickUpSelect">
+
+        <StatusEffect
+          Type="OnSecondaryUse"
+          Target="This"
+          Delay="0.01">
+          <Use/>
+        </StatusEffect>
+      </Throwable>
+
+      <Projectile
+        CharacterUsable="false"
+        LaunchImpulse="0"
+        ImpulseSpread="0.0"
+        StickToCharacters="false"
+        StickToItems="false"
+        StickToStructures="false"
+        StickToDoors="false">
+
+        <Attack
+          TargetImpulse="3"
+          ItemDamage="1"
+          StructureDamage="0"
+          StructureSoundType="StructureSlash">
+          <Affliction Identifier="stun" Strength="0.05"/>
+        </Attack>
+
+        <StatusEffect Type="OnImpact" Target="UseTarget">
+          <Conditional EntityType="Character" />
+          <Sound File="Content/Sounds/Damage/LimbSlash1.ogg" Range="1000" SelectionMode="random"/>
+          <Sound File="Content/Sounds/Damage/LimbSlash2.ogg" Range="1000"/>
+          <Sound File="Content/Sounds/Damage/LimbSlash3.ogg" Range="1000"/>
+          <Sound File="Content/Sounds/Damage/LimbSlash4.ogg" Range="1000"/>
+          <Sound File="Content/Sounds/Damage/LimbSlash5.ogg" Range="1000"/>
+          <Sound File="Content/Sounds/Damage/LimbSlash6.ogg" Range="1000"/>
+        </StatusEffect>
+
+        <StatusEffect Type="OnBroken" Target="This">
+          <Remove/>
+        </StatusEffect>
+      </Projectile>
+    </Item>
+  </Items>
+</Override>
