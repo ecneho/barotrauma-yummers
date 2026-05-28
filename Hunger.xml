@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Afflictions>
+    <Affliction
+      Identifier="yum-hunger"
+      Type="hunger"
+
+      Name="Hunger"
+      Description="Full stomach."
+      CauseOfDeathDescription="They have died of starvation."
+      SelfCauseOfDeathDescription="You have died of starvation."
+
+      MaxStrength="100"
+      LimbSpecific="false"
+      IndicatorLimb="Torso"
+      HideIconAfterDelay="true"
+
+      ActivationThreshold="0"
+      TreatmentThreshold="60"
+      TreatmentSuggestionThreshold="1000"
+      ShowInHealthScannerThreshold="0"
+      
+      IconColors="0,180,0,255;180,0,0,255"
+      HealableInMedicalClinic="false"
+      MedicalSkillGain="0.0"
+      VitalityLossRequiredForTreatment="False">
+
+      <!-- Self Descriptions -->
+      <Description
+        TextIdentifier="affliction.description.yum-hunger.self.very-low"
+        Target="Self"
+        MinStrength="0"
+        MaxStrength="20">
+      </Description>
+
+      <Description
+        TextIdentifier="affliction.description.yum-hunger.self.low"
+        Target="Self"
+        MinStrength="20"
+        MaxStrength="40">
+      </Description>
+
+      <Description
+        TextIdentifier="affliction.description.yum-hunger.self.medium"
+        Target="Self"
+        MinStrength="40"
+        MaxStrength="60">
+      </Description>
+
+      <Description
+        TextIdentifier="affliction.description.yum-hunger.self.high"
+        Target="Self"
+        MinStrength="60"
+        MaxStrength="80">
+      </Description>
+
+      <Description
+        TextIdentifier="affliction.description.yum-hunger.self.very-high"
+        Target="Self"
+        MinStrength="80"
+        MaxStrength="100">
+      </Description>
+
+      <!-- TODO: add OtherCharacter Descriptions -->
+
+      <!-- Stage 1: No penalties -->
+      <Effect
+        MinStrength="0"
+        MaxStrength="20"
+        MinAfflictionOverlayAlphaMultiplier="0.0"
+        MaxAfflictionOverlayAlphaMultiplier="0.0">
+      </Effect>
+
+      <!-- Stage 2: Simple penalties -->
+      <Effect
+        MinStrength="20"
+        MaxStrength="40"
+        MinSkillMultiplier="1.0"
+        MaxSkillMultiplier="0.9"
+        MinSpeedMultiplier="1.0"
+        MaxSpeedMultiplier="0.95"
+        MinAfflictionOverlayAlphaMultiplier="0.0"
+        MaxAfflictionOverlayAlphaMultiplier="0.2">
+      </Effect>
+
+      <!-- Stage 3: Mild penalties -->
+      <Effect
+        MinStrength="40"
+        MaxStrength="60"
+        MinSkillMultiplier="0.9"
+        MaxSkillMultiplier="0.75"
+        MinSpeedMultiplier="0.95"
+        MaxSpeedMultiplier="0.85"
+        MinAfflictionOverlayAlphaMultiplier="0.2"
+        MaxAfflictionOverlayAlphaMultiplier="0.5">
+      </Effect>
+
+      <!-- Stage 4: Heavy penalties -->
+      <Effect
+        MinStrength="60"
+        MaxStrength="80"
+        MinSkillMultiplier="0.75"
+        MaxSkillMultiplier="0.5"
+        MinSpeedMultiplier="0.85"
+        MaxSpeedMultiplier="0.7"
+        MinAfflictionOverlayAlphaMultiplier="0.5"
+        MaxAfflictionOverlayAlphaMultiplier="0.8">
+      </Effect>
+
+      <!-- Stage 5: Critical penalties -->
+      <Effect
+        MinStrength="80"
+        MaxStrength="100"
+        MinSkillMultiplier="0.5"
+        MaxSkillMultiplier="0.2"
+        MinSpeedMultiplier="0.7"
+        MaxSpeedMultiplier="0.5"
+        MinAfflictionOverlayAlphaMultiplier="0.8"
+        MaxAfflictionOverlayAlphaMultiplier="1.0">
+      </Effect>
+    </Affliction>
+  </Afflictions>
+</Override>

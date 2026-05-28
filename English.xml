@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <Override>
+    <affliction.description.yum-hunger.self.very-low>HUNGER 0-20</affliction.description.yum-hunger.self.very-low>
+    <affliction.description.yum-hunger.self.low>HUNGER 20-40</affliction.description.yum-hunger.self.low>
+    <affliction.description.yum-hunger.self.medium>HUNGER 40-60</affliction.description.yum-hunger.self.medium>
+    <affliction.description.yum-hunger.self.high>HUNGER 60-80</affliction.description.yum-hunger.self.high>
+    <affliction.description.yum-hunger.self.very-high>HUNGER 80-100</affliction.description.yum-hunger.self.very-high>
+  </Override>
+</infotexts>
