@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <Override>
+    <Talent Identifier="yum-hungertrait">
+      <Description Tag="talentdescription.he-hungryeuropan"/>
+      <AbilityGroupInterval Interval="1.0">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect Type="OnAbility" Target="Character" DisabledDeltaTime="true" MultiplyAfflictionsByMaxVitality="true">
+                <Conditional IsBot="false"/>
+                <Affliction Identifier="yum-hunger" Strength="0.01"/>
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+  </Override>
+</Talents>

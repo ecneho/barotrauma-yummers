@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="Yummers" corepackage="False" modversion="1.0.0" gameversion="1.12.7.0">
   <Afflictions file="%ModDir%/Hunger.xml"/>
+  <Talents file="%ModDir%/Talents.xml" />
   <Text file="%ModDir%/English.xml"/>
+  <RandomEvents file="%ModDir%/Events.xml" />
 </contentpackage>

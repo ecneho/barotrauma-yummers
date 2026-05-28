@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Randomevents>
+    <!-- run an event each outpost -->
+    <EventSet
+    Identifier="yum.event.init"
+    LevelType="outpost"
+    AllowAtStart="true"
+    IgnoreCooldown="true"
+    Additive="true"
+    SelectAlways="true"
+    Campaign="true">
+      <ScriptedEvent
+        Identifier="yum.event.setup"
+        Commonness="100"
+        Probability="1.0">
+      </ScriptedEvent>
+    </EventSet>
+
+    <!-- add hunger talent -->
+    <EventPrefabs>
+      <ScriptedEvent Identifier="yum.event.setup">
+        <WaitAction Time="5"/>
+        <TagAction Criteria="player" Tag="yum-player"/>
+        <StatusEffectAction TargetTag="yum-player">
+          <StatusEffect Target="This" DisableDeltaTime="true">
+            <GiveTalentInfo TalentIdentifiers="yum-hungertrait"/>
+          </StatusEffect>
+        </StatusEffectAction>
+        <!-- <ConversationAction TargetTag="yum-player" Text="Gnawing hunger sets in, turning the body against itself, weakening the mind..." /> -->
+        <ClearTagAction Tag="yum-player"/>
+      </ScriptedEvent>
+    </EventPrefabs>
+  </Randomevents>
+</Override>
