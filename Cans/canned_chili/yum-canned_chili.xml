@@ -5,129 +5,23 @@
       Identifier="yum-canned_chili"
       Name="Canned Chili"
       Description="A sealed can of chili."
-      Category="Food"
-      Subcategory="Canned"
-      Tags="smallitem"
-      Scale="0.5"
-      MaxStackSize="12"
-      MaxStackSizeCharacterInventory="4"
-      CargoContainerIdentifier="metalcrate"
-      UseInHealthInterface="false"
-      ImpactSoundTag="impact_metal_light"
-      ImpactTolerance="5">
+      VariantOf="yum-canned_nolabel">
 
       <Sprite
         Texture="%ModDir%/cans.png"
-        SourceRect="0,8,29,46"
+        SourceRect="31,8,29,46"
         Depth="0.6"
         Origin="0.5,0.5"/>
 
       <InventoryIcon
         Texture="%ModDir%/cans.png"
-        SourceRect="0,8,29,46"
+        SourceRect="31,8,29,46"
         Origin="0.5,0.5"/>
 
       <Body
-        Width="28"
-        Height="53"
+        Width="29"
+        Height="46"
         Density="11.5"/>
-
-      <Deconstruct Time="5" RequiredDeconstructor="deconstructor">
-        <Item Identifier="aluminium" Amount="1" />
-      </Deconstruct>
-
-      <Throwable
-        DisableWhenRangedWeaponEquipped="true"
-        CanBePicked="true"
-        CharacterUsable="true"
-        CanBeCombined="true"
-        RemoveOnCombined="false"
-        Slots="Any,RightHand,LeftHand"
-        ThrowForce="2.0"
-        AimPos="35,-10"
-        SwingWhenUsing="true"
-        Msg="ItemMsgPickUpSelect">
-
-        <StatusEffect
-          Type="OnSecondaryUse"
-          Target="This"
-          Delay="0.01">
-          <Use/>
-        </StatusEffect>
-      </Throwable>
-
-      <Projectile
-        CharacterUsable="false"
-        LaunchImpulse="0"
-        ImpulseSpread="0.0"
-        StickToCharacters="false"
-        StickToItems="false"
-        StickToStructures="false"
-        StickToDoors="false">
-
-        <Attack
-          TargetImpulse="3"
-          ItemDamage="1"
-          StructureDamage="0"
-          StructureSoundType="StructureSlash">
-          <Affliction Identifier="stun" Strength="0.05"/>
-        </Attack>
-
-        <StatusEffect Type="OnImpact" Target="UseTarget">
-          <Conditional EntityType="Character" />
-          <Sound File="Content/Sounds/Damage/LimbSlash1.ogg" Range="1000" SelectionMode="random"/>
-          <Sound File="Content/Sounds/Damage/LimbSlash2.ogg" Range="1000"/>
-          <Sound File="Content/Sounds/Damage/LimbSlash3.ogg" Range="1000"/>
-          <Sound File="Content/Sounds/Damage/LimbSlash4.ogg" Range="1000"/>
-          <Sound File="Content/Sounds/Damage/LimbSlash5.ogg" Range="1000"/>
-          <Sound File="Content/Sounds/Damage/LimbSlash6.ogg" Range="1000"/>
-        </StatusEffect>
-
-        <StatusEffect Type="OnBroken" Target="This">
-          <Remove/>
-        </StatusEffect>
-      </Projectile>
-
-      <ItemContainer
-        Capacity="1"
-        MaxStackSize="1"
-        HideItems="true"
-        AllowDragAndDrop="true"
-        DrawInventory="false">
-        <Containable Items="divingknife">
-          <StatusEffect
-            Type="OnInserted"
-            Target="This,Character"
-            TargetLimbs="LeftHand,RightHand"
-            DisabledDeltaTime="true">
-            <RequiredItem Identifier="divingknife" Type="contained"/>
-          </StatusEffect>
-
-          <StatusEffect
-            Type="OnInserted"
-            Target="This"
-            DisabledDeltaTime="true">
-            <RequiredItem Identifier="divingknife" Type="contained"/>
-
-            <Remove/>
-
-            <SpawnItem
-              Identifier="yum-canned_chili_open"
-              SpawnPosition="SameInventory"
-              SpawnIfCantBeContained="true"
-              SpawnIfInventoryFull="true"
-              Condition="0.8">
-            </SpawnItem>
-
-            <SpawnItem
-              Identifier="divingknife"
-              SpawnPosition="SameInventory"
-              SpawnIfCantBeContained="true"
-              SpawnIfInventoryFull="true">
-            </SpawnItem>
-          </StatusEffect>
-        </Containable>
-      </ItemContainer>
     </Item>
   </Items>
 </Override>

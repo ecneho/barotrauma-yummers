@@ -5,124 +5,23 @@
       Identifier="yum-canned_chili_open"
       Name="Open Can of Chili"
       Description="An open can of chili. Smells alright."
-      Category="Food"
-      Subcategory="Canned"
-      Tags="smallitem"
-      Scale="0.5"
-      MaxStackSize="4"
-      MaxStackSizeCharacterInventory="1"
-      CargoContainerIdentifier="metalcrate"
-      UseInHealthInterface="false"
-      ImpactSoundTag="impact_metal_light"
-      ImpactTolerance="5"
-      Health="10">
+      VariantOf="yum-canned_nolabel_open">
 
       <Sprite
         Texture="%ModDir%/cans.png"
-        SourceRect="0,0,28,53"
+        SourceRect="31,0,29,54"
         Depth="0.6"
-        Origin="0.5,0.5" />
+        Origin="0.5,0.5"/>
 
       <InventoryIcon
         Texture="%ModDir%/cans.png"
-        SourceRect="0,0,28,53"
-        Origin="0.5,0.5" />
+        SourceRect="31,0,29,54"
+        Origin="0.5,0.5"/>
 
       <Body
         Width="29"
         Height="54"
-        Density="11.5" />
-
-      <Deconstruct Time="5" RequiredDeconstructor="deconstructor">
-        <Item Identifier="aluminium" Amount="1" />
-      </Deconstruct>
-
-      <!-- TODO: add eating sound -->
-      <Holdable
-        DisableWhenRangedWeaponEquipped="true"
-        CanBePicked="true"
-        CanBeCombined="false"
-        RemoveOnCombined="false"
-        Slots="LeftHand+RightHand,Any"
-        HoldAngle="10"
-        HoldPos="30,-30"
-        Handle1="-10,-10"
-        Handle2="0,10"
-        Aimable="false"
-        Msg="ItemMsgPickUpSelect">
-
-        <StatusEffect
-          Type="OnSecondaryUse"
-          Target="This"
-          Condition="-1"
-          DisableDeltaTime="true"
-          Comparison="And">
-
-          <Conditional InWater="false" />
-          <Conditional HasStatusTag="neq cooldown" />
-        </StatusEffect>
-
-        <StatusEffect
-          Type="OnSecondaryUse"
-          Target="This"
-          Handle2="-20,55"
-          SetValue="true"
-          Duration="0.5"
-          Comparison="And">
-
-          <Conditional InWater="false" />
-          <Conditional HasStatusTag="neq cooldown" />
-        </StatusEffect>
-
-        <StatusEffect
-          Type="OnSecondaryUse"
-          Target="This"
-          Handle2="0,10"
-          Delay="0.5"
-          Duration="0.1"
-          SetValue="true"
-          Comparison="And">
-
-          <Conditional InWater="false" />
-        </StatusEffect>
-
-        <StatusEffect
-          Type="OnSecondaryUse"
-          Target="This"
-          StatusEffectTags="cooldown"
-          Duration="0.5"
-          SetValue="true"
-          Comparison="And">
-
-          <Conditional HasStatusTag="neq cooldown" />
-        </StatusEffect>
-
-        <StatusEffect
-          Type="OnSecondaryUse"
-          Target="This,Character"
-          Duration="1"
-          Comparison="And">
-
-          <Conditional InWater="false" />
-          <Conditional HasStatusTag="neq cooldown" />
-          <ReduceAffliction Identifier="yum-hunger" Amount="2" />
-        </StatusEffect>
-
-        <StatusEffect
-          Type="OnBroken"
-          Target="This"
-          DisableDeltaTime="true">
-          <Remove />
-          <SpawnItem
-            Identifier="yum-canned_chili_empty"
-            SpawnPosition="SameInventory"
-            Equip="true"
-            Equipped="true"
-            SpawnIfCantBeContained="true"
-            SpawnIfInventoryFull="true">
-          </SpawnItem>
-        </StatusEffect>
-      </Holdable>
+        Density="11.5"/>
     </Item>
   </Items>
 </Override>

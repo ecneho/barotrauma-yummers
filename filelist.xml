@@ -4,7 +4,12 @@
   <Afflictions file="%ModDir%/Hunger.xml"/>
   <Talents file="%ModDir%/Talents.xml" />
   <Text file="%ModDir%/English.xml"/>
+
   <Item file="%ModDir%/Cans/canned_chili/yum-canned_chili.xml" />
   <Item file="%ModDir%/Cans/canned_chili/yum-canned_chili_open.xml" />
   <Item file="%ModDir%/Cans/canned_chili/yum-canned_chili_empty.xml" />
+
+  <Item file="%ModDir%/Cans/canned_nolabel/yum-canned_nolabel.xml" />
+  <Item file="%ModDir%/Cans/canned_nolabel/yum-canned_nolabel_open.xml" />
+  <Item file="%ModDir%/Cans/canned_nolabel/yum-canned_nolabel_empty.xml" />
 </contentpackage>
