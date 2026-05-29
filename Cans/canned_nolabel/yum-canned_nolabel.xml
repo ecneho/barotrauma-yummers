@@ -112,7 +112,7 @@
             <Remove/>
 
             <SpawnItem
-              Identifier="yum-canned_chili_open"
+              Identifier="yum-canned_nolabel_open"
               SpawnPosition="SameInventory"
               SpawnIfCantBeContained="true"
               SpawnIfInventoryFull="true"

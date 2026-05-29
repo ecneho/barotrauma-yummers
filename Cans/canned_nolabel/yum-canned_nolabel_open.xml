@@ -114,7 +114,7 @@
           DisableDeltaTime="true">
           <Remove />
           <SpawnItem
-            Identifier="yum-canned_chili_empty"
+            Identifier="yum-canned_nolabel_empty"
             SpawnPosition="SameInventory"
             Equip="true"
             Equipped="true"
